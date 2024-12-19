@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Space Grotesk';
+        src: url('/fonts/space-grotesk-1.1.4/webfont/SpaceGrotesk-Regular.woff2') format('woff2');
+    }
+
+    body {
+        @apply bg-[#0F000A] text-[#FEF2FF];
+        font-family: 'Space Grotesk', sans-serif;
+    }
+    .min-h-screen {
+        background-image: url('/assets/grids/grid-12x12.svg');
+        /*background-repeat: no-repeat;*/
+        background-position: 80vw 40vh;
+
+    }
+}
