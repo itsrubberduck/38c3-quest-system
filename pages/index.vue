@@ -1,3 +1,4 @@
 <template>
   <LanguageSelect />
+  <GitHubLink/>
 </template>

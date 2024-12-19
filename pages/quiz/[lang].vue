@@ -7,6 +7,7 @@
         v-bind="componentProps"
     />
   </div>
+  <GitHubLink/>
 </template>
 
 <script setup lang="ts">
