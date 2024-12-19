@@ -70,8 +70,6 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue';
-
 const quizStore = useQuizStore();
 const step = computed(() => quizStore.currentStepData);
 const lang = computed(() => quizStore.language);

@@ -43,7 +43,9 @@
   </div>
 </template>
 <script setup>
-import {strings} from '~/data/steps';
+const useQuest = useQuest()
+await useQuest.fetchQuest()
+const {strings} = useQuest.quest.value
 const quizStore = useQuizStore();
 const str = computed(() => strings[quizStore.language].resultScreen);
 const lang = computed(() => quizStore.language);

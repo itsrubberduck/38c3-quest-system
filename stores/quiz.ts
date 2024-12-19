@@ -1,15 +1,24 @@
 import {defineStore} from 'pinia';
-import {frameworks} from "~/data/frameworks";
-import {steps} from "~/data/steps";
 
+let steps = []
+let frameworks = []
 export const useQuizStore = defineStore('quiz', {
-    state: () => ({
-        currentStep: 'start',
-        choices: [] as choice[],
-        language: 'de',
-        isComplete: false,
-        result: null as typeof frameworks[0] | null,
-    }),
+
+
+    state: async () => {
+        const questStore = useQuest()
+        await questStore.fetchQuest()
+        steps = questStore.quest.value.steps
+        frameworks = questStore.quest.value.outcomes
+
+        return {
+            currentStep: 'start',
+            choices: [] as choice[],
+            language: 'de',
+            isComplete: false,
+            result: null as typeof frameworks[0] | null,
+        }
+    },
 
     getters: {
         currentStepData: (state) =>

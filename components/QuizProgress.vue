@@ -8,7 +8,9 @@
 </template>
 
 <script setup>
-import {steps} from '~/data/steps';
+const quest = useQuest()
+await quest.fetchQuest()
+const {steps} = quest.quest.value
 
 const quizStore = useQuizStore();
 const {currentStep, totalSteps} = storeToRefs(quizStore);

@@ -42,8 +42,9 @@
 </template>
 
 <script setup lang="ts">
-import {ref, computed, onMounted} from 'vue';
-import {strings} from '~/data/steps';
+const useQuest = useQuest()
+await useQuest.fetchQuest()
+const {strings} = useQuest.quest.value
 
 const quizStore = useQuizStore();
 const str = computed(() => strings[quizStore.language].startScreen);
