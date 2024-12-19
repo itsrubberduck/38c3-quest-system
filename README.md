@@ -1,6 +1,21 @@
-# Nuxt Minimal Starter
+# 38C3 Quest System
+=======
+An interactive quest system for 38C3 - currently featuring the "Which JavaScript Framework are you?" quest. Built with Nuxt 3, Tailwind CSS.
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+> **Note**: Multiple quests and community contributions are planned for the future but not yet implemented.
+
+## Current Features
+
+- 🎭 Interactive JavaScript Framework personality quiz
+- ⚡ Quick play format (perfect for escalator rides)
+- 🎨 Cyberdelic wireframe design
+- 🌐 German language (English coming soon)
+
+## Planned Features (WIP)
+- 🔧 Community quest contributions
+- 🌍 Multiple languages
+- 🎮 Additional storylines
+- 🤝 Quest creation system
 
 ## Setup
 
@@ -72,4 +87,28 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Contributing Quests
+
+> **Note**: The quest contribution system is still in development. The following format is preliminary and subject to change.
+
+### Quest Guidelines
+
+- 🎯 5-8 decision points (optimized for escalator play time)
+- 🎭 Should fit the congress vibe
+- 🔧 Tech humor welcome
+- 🌐 Multiple language support appreciated
+- 🎨 Images should follow the wireframe style guide
+
+## Development
+
+The project uses:
+- [Nuxt 3](https://nuxt.com)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Pinia](https://pinia.vuejs.org) for state management
+- [TypeScript](https://www.typescriptlang.org)
+
+## Links
+
+- [Live Demo](https://ccc-quest-system.netlify.app)
+- [Nuxt 3 Documentation](https://nuxt.com/docs/getting-started/introduction)
+- [Deployment Documentation](https://nuxt.com/docs/getting-started/deployment)
