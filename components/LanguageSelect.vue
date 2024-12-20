@@ -1,10 +1,6 @@
 <template>
   <div class="min-h-screen flex items-center justify-center bg-[#0F000A]">
     <div class="relative w-full max-w-2xl mx-auto p-8">
-      <!-- Decorative grid background -->
-      <div class="absolute inset-0 grid grid-cols-12 gap-2 opacity-20">
-        <div v-for="n in 144" :key="n" class="border border-[#6A5FDB] h-8"></div>
-      </div>
 
       <!-- Glitchy title -->
       <div class="flex items-end mb-12 justify-start">
