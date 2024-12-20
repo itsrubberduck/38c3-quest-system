@@ -51,7 +51,7 @@ export const frameworks: Framework[] = [
             de: 'Perfektionismus durch Reduktion! Warum sich mit Code-Optimierung herumschlagen, wenn man einfach die Hälfte löschen kann? Dein Motto: "Perfectly balanced, as all repositories should be." Bonus: Deine node_modules sind immer genau halb so groß wie die deiner Kollegen!',
             en: 'Perfectionism through reduction! Why struggle with code optimization when you can simply delete half of it? Your motto: "Perfectly balanced, as all repositories should be." Bonus: Your node_modules are always exactly half the size of your colleagues\'!'
         },
-        repoUrl: 'https://github.com/thanosjs/thanosjs'
+        repoUrl: 'https://github.com/anandundavia/thanos-js'
     },
     {
         id: 'thaw-carrots',
@@ -69,6 +69,6 @@ export const frameworks: Framework[] = [
             de: 'Nostalgiker mit Hang zur digitalen Entschleunigung! Du findest, das Internet ist heutzutage viel zu schnell. Wo bleibt da die Spannung? Das Warten? Die Zeit für einen Kaffee während des Seitenaufbaus? Deine Websites laden garantiert so langsam wie 1995 - und das ist gut so!',
             en: 'Nostalgic with a tendency for digital deceleration! You think the internet is way too fast these days. Where\'s the suspense? The waiting? The time for a coffee while the page loads? Your websites are guaranteed to load as slowly as in 1995 - and that\'s a good thing!'
         },
-        repoUrl: 'https://github.com/comcastify/comcastify.js'
+        repoUrl: 'https://github.com/theonion/comcastifyjs'
     }
 ];
