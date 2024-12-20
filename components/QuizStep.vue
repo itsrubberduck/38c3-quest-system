@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-[#0F000A] p-6">
+  <div class="min-h-screen bg-[#0F000A] p-6" v-if="step">
     <QuizProgress/>
 
     <!-- Full screen glitch overlay -->
@@ -71,6 +71,10 @@
 
 <script setup>
 const quizStore = useQuizStore();
+
+const quest = useQuest();
+await quest.fetchQuest();
+
 const step = computed(() => quizStore.currentStepData);
 const lang = computed(() => quizStore.language);
 const contentRef = ref(null);

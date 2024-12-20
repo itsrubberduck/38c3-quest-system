@@ -6,12 +6,17 @@
         :key="currentStep"
         v-bind="componentProps"
     />
+    {{ currentStep }}
   </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute();
 const quizStore = useQuizStore();
+
+const quest = useQuest();
+await quest.fetchQuest();
+quizStore.reset();
 
 // Initialize quiz with language
 onMounted(() => {
@@ -22,7 +27,7 @@ const currentStep = computed(() => quizStore.currentStep);
 const isComplete = computed(() => quizStore.isComplete);
 
 const currentComponent = computed(() => {
-  console.log(currentStep.value);
+  console.log("current step", currentStep.value);
   if (currentStep.value === 'start') return resolveComponent('StartScreen');
   if (isComplete.value) return resolveComponent('ResultScreen');
   return resolveComponent('QuizStep');

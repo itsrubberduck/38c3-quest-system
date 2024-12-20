@@ -24,14 +24,14 @@
       <!-- Language selection -->
       <div class="relative z-10 space-y-6">
         <button
-            v-for="lang in ['DE', 'EN']"
+            v-for="lang in languages"
             :key="lang"
             @click="selectLanguage(lang.toLowerCase())"
             class="w-full p-4 border-2 border-[#FF5053] bg-transparent hover:bg-[#FF5053]/10
                  text-[#FEF2FF] transition-all duration-300 flex items-center justify-between
                  hover:translate-x-1 hover:shadow-[4px_4px_0_0_#FF5053]"
         >
-          <span class="text-xl">{{ lang }}</span>
+          <span class="text-xl">{{ lang.toUpperCase() }}</span>
           <span class="text-[#B2AAFF]">>_</span>
         </button>
       </div>
@@ -50,6 +50,10 @@
 
 <script setup lang="ts">
 const router = useRouter();
+
+const quest = useQuest();
+await quest.fetchQuest();
+const {languages} = quest.quest.value;
 
 const selectLanguage = (lang: string) => {
   router.push(`/quiz/${lang}`);

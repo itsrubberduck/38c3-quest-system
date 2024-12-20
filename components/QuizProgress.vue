@@ -2,7 +2,7 @@
   <div class="fixed top-0 left-0 w-full h-1 bg-[#29114C] z-50">
     <div
         class="h-full bg-[#FF5053] smooth-transition"
-        :style="{ width: `${(currentStepIndex / totalStepCount) * 100}%` }"
+        :style="{ width: `${progress}%` }"
     />
   </div>
 </template>
@@ -10,12 +10,9 @@
 <script setup>
 const quest = useQuest()
 await quest.fetchQuest()
-const {steps} = quest.quest.value
 
 const quizStore = useQuizStore();
-const {currentStep, totalSteps} = storeToRefs(quizStore);
-const currentStepIndex = computed(() => steps.findIndex(step => step.id === currentStep.value));
-const totalStepCount = steps.length;
+const {progress} = storeToRefs(quizStore);
 </script>
 
 <style scoped>

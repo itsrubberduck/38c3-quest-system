@@ -2,6 +2,7 @@ import {defineStore} from 'pinia';
 
 let steps = []
 let frameworks = []
+let str = {}
 export const useQuizStore = defineStore('quiz', {
 
 
@@ -10,6 +11,7 @@ export const useQuizStore = defineStore('quiz', {
         await questStore.fetchQuest()
         steps = questStore.quest.value.steps
         frameworks = questStore.quest.value.outcomes
+        str = questStore.quest.value.strings
 
         return {
             currentStep: 'start',
@@ -27,7 +29,8 @@ export const useQuizStore = defineStore('quiz', {
         progress: (state) => {
             const currentIndex = steps.findIndex(s => s.id === state.currentStep);
             return currentIndex / (steps.length - 1);
-        }
+        },
+
     },
 
     actions: {
@@ -58,6 +61,7 @@ export const useQuizStore = defineStore('quiz', {
         },
 
         gotToStepIndex(index: number) {
+            console.log('gotToStepIndex called', index);
             this.currentStep = steps[index].id;
         },
 

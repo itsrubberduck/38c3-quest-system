@@ -22,6 +22,7 @@ interface Quest {
 
 export const useQuest = (questId: string = 'which-js-framework-are-you') => {
     const quest = ref<Quest | null>({
+        languages: [],
         outcomes: [],
         steps: [],
         strings: {}
@@ -33,7 +34,6 @@ export const useQuest = (questId: string = 'which-js-framework-are-you') => {
         loading.value = true
         error.value = null
 
-        console.log('fetching quest', questId)
         try {
             const response = await fetch(`/quests/${questId}.json`)
             if (!response.ok) {

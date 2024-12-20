@@ -42,12 +42,12 @@
 </template>
 
 <script setup lang="ts">
-const useQuest = useQuest()
-await useQuest.fetchQuest()
-const {strings} = useQuest.quest.value
+const quest = useQuest()
+await quest.fetchQuest()
+const {strings} = quest.quest.value
 
 const quizStore = useQuizStore();
-const str = computed(() => strings[quizStore.language].startScreen);
+const str = computed(() => strings[quizStore.language ?? 'en'].startScreen);
 const isRevealed = ref(false);
 const isTypingDone = ref(false);
 const displayedText = ref('');
